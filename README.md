@@ -73,3 +73,5 @@ This project is licensed under the [MIT License](./LICENSE).
 ### Copyright
 
 (c) 2024 [Finbarrs Oketunji](https://finbarrs.eu).
+
+[NPM](https://www.npmjs.com/package/nysiis)

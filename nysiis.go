@@ -41,6 +41,16 @@ func (n *Nysiis) translateFirstCharacters(name string) string {
 		name = "FF" + name[2:]
 	case strings.HasPrefix(name, "SCH"):
 		name = "SSS" + name[3:]
+	case strings.HasPrefix(name, "GB"):
+		name = "J" + name[2:] // Igbo: 'Gb' -> 'J'
+	case strings.HasPrefix(name, "KP"):
+		name = "P" + name[2:] // Igbo: 'Kp' -> 'P'
+	case strings.HasPrefix(name, "NW"):
+		name = "W" + name[2:] // Igbo: 'Nw' -> 'W'
+	case strings.HasPrefix(name, "TS"):
+		name = "S" + name[2:] // Yoruba: 'Ts' -> 'S'
+	case strings.HasPrefix(name, "SH"):
+		name = "S" + name[2:] // Hausa: 'Sh' -> 'S'
 	}
 	return name
 }
@@ -89,6 +99,34 @@ func (n *Nysiis) generateKey(name string) string {
 			char = prevChar
 		} else if char == 'W' && (prevChar == 'A' || prevChar == 'E' || prevChar == 'I' || prevChar == 'O' || prevChar == 'U') {
 			char = prevChar
+		} else if char == 'G' && i+1 < len(name) && name[i+1] == 'B' {
+			char = 'J' // Igbo: 'Gb' -> 'J'
+		} else if char == 'K' && i+1 < len(name) && name[i+1] == 'P' {
+			char = 'P' // Igbo: 'Kp' -> 'P'
+		} else if char == 'N' && i+1 < len(name) && name[i+1] == 'W' {
+			char = 'W' // Igbo: 'Nw' -> 'W'
+		} else if char == 'T' && i+1 < len(name) && name[i+1] == 'S' {
+			char = 'S' // Yoruba: 'Ts' -> 'S'
+		} else if char == 'S' && i+1 < len(name) && name[i+1] == 'H' {
+			char = 'S' // Hausa: 'Sh' -> 'S'
+		}
+
+		// Handle vowel harmony and tonal differences
+		if n.vowels[char] && i > 0 && n.vowels[prevChar] {
+			if prevChar == 'A' || prevChar == 'O' || prevChar == 'U' {
+				if char == 'E' || char == 'I' {
+					char = 'A'
+				}
+			} else if prevChar == 'E' || prevChar == 'I' {
+				if char == 'A' || char == 'O' || char == 'U' {
+					char = 'E'
+				}
+			}
+		}
+
+		// Ignore tonal differences
+		if char >= 'A' && char <= 'Z' {
+			char = rune(strings.ToUpper(string(char))[0])
 		}
 
 		if char != prevChar {

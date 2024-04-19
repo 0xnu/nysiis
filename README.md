@@ -33,6 +33,9 @@ func main() {
 		"Watkins",
 		"Robert Johnson",
 		"Samantha Williams",
+		"Olanrewaju Akinyele", // Yoruba
+		"Obinwanne Obiora", // Igbo
+		"Abdussalamu Abubakar", // Hausa
 	}
 
 	// Encode each name using NYSIIS

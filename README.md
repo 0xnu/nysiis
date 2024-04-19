@@ -5,7 +5,7 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/0xnu/nysiis.svg)](https://pkg.go.dev/github.com/0xnu/nysiis)
 [![License](https://img.shields.io/github/license/0xnu/nysiis)](/LICENSE)
 
-The `nysiis` package provides a JavaScript implementation of the [New York State Identification and Intelligence System](https://en.wikipedia.org/wiki/New_York_State_Identification_and_Intelligence_System) (NYSIIS) phonetic encoding algorithm. NYSIIS encodes names based on pronunciation, which is helpful in name-matching and searching applications.
+The `nysiis` package provides a Golang implementation of the [New York State Identification and Intelligence System](https://en.wikipedia.org/wiki/New_York_State_Identification_and_Intelligence_System) (NYSIIS) phonetic encoding algorithm. NYSIIS encodes names based on pronunciation, which is helpful in name-matching and searching applications.
 
 ### Installation
 

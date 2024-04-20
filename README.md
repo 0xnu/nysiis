@@ -3,6 +3,7 @@
 [![Release](https://img.shields.io/github/release/0xnu/nysiis.svg)](https://github.com/0xnu/nysiis/releases/latest)
 [![Go Report Card](https://goreportcard.com/badge/github.com/0xnu/nysiis)](https://goreportcard.com/report/github.com/0xnu/nysiis)
 [![Go Reference](https://pkg.go.dev/badge/github.com/0xnu/nysiis.svg)](https://pkg.go.dev/github.com/0xnu/nysiis)
+[![PyPI version](https://img.shields.io/pypi/v/pynysiis.svg)](https://pypi.org/project/pynysiis/)
 [![npm version](https://img.shields.io/npm/v/nysiis.svg)](https://www.npmjs.com/package/nysiis)
 [![License](https://img.shields.io/github/license/0xnu/nysiis)](/LICENSE)
 

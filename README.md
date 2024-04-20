@@ -36,6 +36,7 @@ func main() {
 		"Olanrewaju Akinyele", // Yoruba
 		"Obinwanne Obiora", // Igbo
 		"Abdussalamu Abubakar", // Hausa
+		"Virat Kohli", // Hindi
 	}
 
 	// Encode each name using NYSIIS

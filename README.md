@@ -70,6 +70,11 @@ go test ./...
 }
 ```
 
+Additional References
+
++ [Commission Implementing Regulation (EU) 2016/480](https://www.legislation.gov.uk/eur/2016/480/contents)
++ [Commission Implementing Regulation (EU) 2023/2381](https://eur-lex.europa.eu/eli/reg_impl/2023/2381/oj)
+
 ### License
 
 This project is licensed under the [MIT License](./LICENSE).

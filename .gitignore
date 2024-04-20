@@ -2,3 +2,4 @@
 .vscode
 create.sh
 push.sh
+.golangci.yml

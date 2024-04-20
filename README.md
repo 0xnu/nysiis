@@ -3,6 +3,7 @@
 [![Release](https://img.shields.io/github/release/0xnu/nysiis.svg)](https://github.com/0xnu/nysiis/releases/latest)
 [![Go Report Card](https://goreportcard.com/badge/github.com/0xnu/nysiis)](https://goreportcard.com/report/github.com/0xnu/nysiis)
 [![Go Reference](https://pkg.go.dev/badge/github.com/0xnu/nysiis.svg)](https://pkg.go.dev/github.com/0xnu/nysiis)
+[![npm version](https://img.shields.io/npm/v/nysiis.svg)](https://www.npmjs.com/package/nysiis)
 [![License](https://img.shields.io/github/license/0xnu/nysiis)](/LICENSE)
 
 The `nysiis` package provides a Golang implementation of the [New York State Identification and Intelligence System](https://en.wikipedia.org/wiki/New_York_State_Identification_and_Intelligence_System) (NYSIIS) phonetic encoding algorithm. NYSIIS encodes names based on pronunciation, which is helpful in name-matching and searching applications.
@@ -83,5 +84,3 @@ This project is licensed under the [MIT License](./LICENSE).
 ### Copyright
 
 (c) 2024 [Finbarrs Oketunji](https://finbarrs.eu).
-
-[NPM](https://www.npmjs.com/package/nysiis)

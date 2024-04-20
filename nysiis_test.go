@@ -36,6 +36,10 @@ func TestNysiis_Encode(t *testing.T) {
 	encodedName7 := nysiis.NewNysiis().Encode(name7)
 	fmt.Printf("Encoded name for %q: %s\n", name7, encodedName7)
 
+	name8 := "Usman Shah"
+	encodedName8 := nysiis.NewNysiis().Encode(name8)
+	fmt.Printf("Encoded name for %q: %s\n", name8, encodedName8)
+
 	// Output:
 	// Encoded name for "Watkins": WATCAN
 	// Encoded name for "Robert Johnson": RABART
@@ -44,4 +48,5 @@ func TestNysiis_Encode(t *testing.T) {
 	// Encoded name for "Obinwanne Obiora": OBAWAN
 	// Encoded name for "Abdussalamu Abubakar": ABDASA
 	// Encoded name for "Virat Kohli": VARATC
+	// Encoded name for "Usman Shah": USNANS
 }

@@ -65,6 +65,16 @@ func (n *Nysiis) translateFirstCharacters(name string) string {
 		name = "F" + name[2:] // Hindi: 'Ph' -> 'F'
 	case strings.HasPrefix(name, "TH"):
 		name = "T" + name[2:] // Hindi: 'Th' -> 'T'
+	case strings.HasPrefix(name, "CH"):
+		name = "C" + name[2:] // Urdu: 'Ch' -> 'C'
+	case strings.HasPrefix(name, "GH"):
+		name = "G" + name[2:] // Urdu: 'Gh' -> 'G'
+	case strings.HasPrefix(name, "KH"):
+		name = "K" + name[2:] // Urdu: 'Kh' -> 'K'
+	case strings.HasPrefix(name, "SH"):
+		name = "S" + name[2:] // Urdu: 'Sh' -> 'S'
+	case strings.HasPrefix(name, "ZH"):
+		name = "J" + name[2:] // Urdu: 'Zh' -> 'J'
 	}
 	return name
 }
@@ -140,21 +150,25 @@ func (n *Nysiis) translateChar(char rune, name string, i int) rune {
 	} else if char == 'T' && i+1 < len(name) && name[i+1] == 'S' {
 		char = 'S' // Yoruba: 'Ts' -> 'S'
 	} else if char == 'S' && i+1 < len(name) && name[i+1] == 'H' {
-		char = 'S' // Hausa: 'Sh' -> 'S'
+		char = 'S' // Hausa, Urdu: 'Sh' -> 'S'
 	} else if char == 'B' && i+1 < len(name) && name[i+1] == 'H' {
 		char = 'B' // Hindi: 'Bh' -> 'B'
 	} else if char == 'D' && i+1 < len(name) && name[i+1] == 'H' {
 		char = 'D' // Hindi: 'Dh' -> 'D'
 	} else if char == 'G' && i+1 < len(name) && name[i+1] == 'H' {
-		char = 'G' // Hindi: 'Gh' -> 'G'
+		char = 'G' // Hindi, Urdu: 'Gh' -> 'G'
 	} else if char == 'J' && i+1 < len(name) && name[i+1] == 'H' {
 		char = 'J' // Hindi: 'Jh' -> 'J'
 	} else if char == 'K' && i+1 < len(name) && name[i+1] == 'H' {
-		char = 'K' // Hindi: 'Kh' -> 'K'
+		char = 'K' // Hindi, Urdu: 'Kh' -> 'K'
 	} else if char == 'P' && i+1 < len(name) && name[i+1] == 'H' {
 		char = 'F' // Hindi: 'Ph' -> 'F'
 	} else if char == 'T' && i+1 < len(name) && name[i+1] == 'H' {
 		char = 'T' // Hindi: 'Th' -> 'T'
+	} else if char == 'C' && i+1 < len(name) && name[i+1] == 'H' {
+		char = 'C' // Urdu: 'Ch' -> 'C'
+	} else if char == 'Z' && i+1 < len(name) && name[i+1] == 'H' {
+		char = 'J' // Urdu: 'Zh' -> 'J'
 	}
 
 	return char

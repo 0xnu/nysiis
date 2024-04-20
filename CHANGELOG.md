@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.3 - 2024-04-20
+* Urdu Phonetic Patterns
+
 ## 1.0.2 - 2024-04-20
 * Hindi Phonetic Patterns
 
